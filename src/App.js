@@ -11,6 +11,7 @@ import Chairs from "./components/Categories-pages/Chairs";
 import SkinCare from "./components/Categories-pages/SkinCare";
 import ProductPage, { CartContext } from "./pages/ProductPage";
 import { useEffect, useState } from "react";
+import CreditCardForm from "./components/Payments/Payments";
 
 function App() {
   const [cartItem, setCartItem] = useState([]);
@@ -38,7 +39,6 @@ function App() {
       <Navbar />
       <Routes>
         <Route index path="/" element={<Home />} />
-
         <Route path="categories" element={<Categories />}>
           <Route path="all" element={<All />} />
           <Route path="furnitures" element={<Furnitures />} />
@@ -49,6 +49,7 @@ function App() {
           <Route path="skin-care" element={<SkinCare />} />
         </Route>
         <Route path="categories/product/:id" element={<ProductPage />} />
+        <Route path="/checkout" element={<CreditCardForm/>} />
       </Routes>
     </CartContext.Provider>
   );

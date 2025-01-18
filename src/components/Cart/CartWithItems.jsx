@@ -4,6 +4,7 @@ import { useContext, useEffect, useState } from "react";
 import { CartContext } from "../../pages/ProductPage";
 import EmptyCart from "./EmptyCart";
 
+
 function CartWithItems() {
   const { cartItem, setCartItem } = useContext(CartContext);
 
@@ -33,7 +34,7 @@ function CartWithItems() {
           <p className="total-price">{totalPrice + ".00$"}</p>
         </div>
         <div className="sub-left">
-          <Link>Go to Checkout</Link>
+          <Link to="/checkout">Go to Checkout</Link>
         </div>
       </div>
     </>
